@@ -2,7 +2,7 @@
 let fs = require('fs');
 let gen_src = require('./data_src');
 
-function gen_data(number_data=100,file_name="test_dat.json"){
+function gen_data(number_data=100,file_name="test-dat.json"){
     let arr_obj=[];
     for(let i=0;i<number_data;i++){
         let obj ={
@@ -13,7 +13,13 @@ function gen_data(number_data=100,file_name="test_dat.json"){
         }
         arr_obj.push(obj);
     }
-    let str = JSON.stringify(arr_obj);
+
+    let ret ={
+        data: arr_obj,
+        total:arr_obj.length, 
+    }
+    let str = JSON.stringify(ret);
+
     fs.writeFileSync(file_name,str,'utf8');
     //return arr_obj;
 }
