@@ -28,33 +28,37 @@ const state_geo_src = [
     },
     {
         code: 4,
-        name: "Test5",
+        name: "Test6",
         geo: [434.0617846610731, 238.84362029980593]
     },
     {
-        code: 4,
-        name: "Test5",
+        code: 5,
+        name: "Test7",
         geo: [226.72997290918303, 268.76486588959955]
     },
     {
-        code: 4,
-        name: "Test5",
+        code: 6,
+        name: "Test8",
         geo: [82.08615071239029, 288.14124547828123]
     },
     {
-        code: 4,
-        name: "Test5",
+        code: 7,
+        name: "Test9",
         geo: [102.46086873323198, 523.1944003303727]
     },
     {
-        code: 4,
-        name: "Test5",
+        code: 8,
+        name: "Test10",
         geo: [919.0358108845031, 93.61428430040085]
     },
 
 
 ];
+
+
 let gender = ['male', 'female'];
+
+
 function gen_age(start = 18, step = 5, end = 90) {
     let obj = [];
     let idx = 0;
@@ -186,7 +190,7 @@ function gen_data(number_data = 10, file_name = "test-dat.json") {
         state_inf = analyse_state(obj,state_inf);
         arr_obj.push(obj);
     }
-
+    
     let ret = {
         data: arr_obj,
         total: arr_obj.length,
